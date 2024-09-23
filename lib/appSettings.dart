@@ -10,7 +10,7 @@ class AppSetting extends StatelessWidget {
     const appTitle = 'API Setting';
 
     return Scaffold(
-      backgroundColor:  Color.fromARGB(255, 230, 241, 225),
+      backgroundColor: Color.fromARGB(255, 230, 241, 225),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         centerTitle: true,
@@ -82,92 +82,94 @@ class AppSettingFormState extends State<AppSettingForm> {
   @override
   Widget build(BuildContext context) {
     // Build a Form widget using the _formKey created above.
-    return Form(
-      key: _formKey,
-      child: Padding(
-        padding: const EdgeInsets.only(top: 50),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          // mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 17, vertical: 10),
-              child: TextFormField(
-                autofocus: true,
-                decoration: InputDecoration(
-                  hintText: "Enter your API Path",
-                  enabledBorder: OutlineInputBorder( 
-                        borderRadius: BorderRadius.circular(10),     
-                      borderSide: BorderSide(color: Colors.black),   
-                      ),  
-              focusedBorder: OutlineInputBorder(
-                 borderRadius: BorderRadius.circular(10), 
-                      borderSide: BorderSide(color: Colors.black),
-                   ),  
-                  fillColor: Colors.grey.withOpacity(0.2),
-                  filled: true,
-                ),
-                // decoration: InputDecoration(
-                //     hintText: "Enter your API Path",
-                //     border: const OutlineInputBorder(),
-                //     focusedBorder: OutlineInputBorder(
-                //       borderSide: BorderSide(color: Colors.deepPurple.shade300),
-                //     ),
-                //     labelStyle: const TextStyle(color: Colors.deepPurple)),
-                // decoration: const InputDecoration(
-                //   border: UnderlineInputBorder(
-
-                //   ),
-                //   labelText: 'Enter your API Path',
-                // ),
-
-                controller: apiPathController,
-                // The validator receives the text that the user has entered.
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return 'Please enter api path';
-                  }
-                  return null;
-                },
-              ),
-            ),
-            Padding(
-              padding:
-                  const EdgeInsets.symmetric(vertical: 10,horizontal: 15),
-              child:Container(
-                   height: 50,
-                  //   width: 369,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Colors.cyan.shade700,
+    return SingleChildScrollView(
+      child: Form(
+        key: _formKey,
+        child: Padding(
+          padding: const EdgeInsets.only(top: 50),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            // mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                    height: 350,
+                    width: double.infinity,
+                    child: Image.asset(
+                      "assets/images/m.png",
+                      height: double.infinity,
+                      width: double.infinity,
                     ),
-                child: MaterialButton(
-                  onPressed: () {
-                    // Validate returns true if the form is valid, or false otherwise.
-                    if (_formKey.currentState!.validate()) {
-                      _setApiPath();
-                
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(content: Text('Data Saved')),
-                      );
+                  ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 17, vertical: 10),
+                child: TextFormField(
+                  autofocus: true,
+                  decoration: InputDecoration(
+                    hintText: "Enter your API Path",
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: BorderSide(color: Colors.black),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: BorderSide(color: Colors.black),
+                    ),
+                    // fillColor: Colors.grey.withOpacity(0.2),
+                    // filled: true,
+                  ),
+      
+                  controller: apiPathController,
+                  // The validator receives the text that the user has entered.
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Please enter api path';
                     }
+                    return null;
                   },
-                  //      style: ElevatedButton.styleFrom(
-                  //   shape: const StadiumBorder(
-                  //     side: BorderSide.none
-                  //   ),
-                  //   padding: const EdgeInsets.symmetric(vertical: 15),
-                  //   backgroundColor: Colors.cyan.shade700,
-                  // ),
-                  child: Center(
-                      child: const Text(
-                    'Save',
-                    style: TextStyle(color: Colors.white, fontSize: 16),
-                  )),
                 ),
               ),
-            ),
-          ],
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+                child: Container(
+                  height: 50,
+                  //   width: 369,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.cyan.shade700,
+                  ),
+                  child: MaterialButton(
+                    onPressed: () {
+                      // Validate returns true if the form is valid, or false otherwise.
+                      if (_formKey.currentState!.validate()) {
+                        _setApiPath();
+      
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                              backgroundColor: Colors.green,
+                              content: Text(
+                                'Data Saved',
+                                style: TextStyle(color: Colors.white),
+                              )),
+                        );
+                      }
+                    },
+                    //      style: ElevatedButton.styleFrom(
+                    //   shape: const StadiumBorder(
+                    //     side: BorderSide.none
+                    //   ),
+                    //   padding: const EdgeInsets.symmetric(vertical: 15),
+                    //   backgroundColor: Colors.cyan.shade700,
+                    // ),
+                    child: Center(
+                        child: const Text(
+                      'Save',
+                      style: TextStyle(color: Colors.white, fontSize: 16),
+                    )),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

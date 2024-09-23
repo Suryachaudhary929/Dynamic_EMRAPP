@@ -191,11 +191,11 @@ class PatientInfoFormState extends State<PatientInfoForm> {
                     hintText: 'Mrno',
                     // labelText: 'Mrno',
                      enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(5),
+                        borderRadius: BorderRadius.circular(10),
                         borderSide: BorderSide(color: Colors.black),
                       ),
                       focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(5),
+                        borderRadius: BorderRadius.circular(10),
                         borderSide: BorderSide(color: Colors.black),
                       ),
                   ),
@@ -217,11 +217,11 @@ class PatientInfoFormState extends State<PatientInfoForm> {
                         return DropdownButtonFormField(
                            decoration: InputDecoration(
                                 enabledBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(5),
+                                  borderRadius: BorderRadius.circular(10),
                                   borderSide: BorderSide(color: Colors.black),
                                 ),
                                 focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(5),
+                                  borderRadius: BorderRadius.circular(10),
                                   borderSide: BorderSide(color: Colors.black),
                                 ),
                               ),
@@ -259,11 +259,11 @@ class PatientInfoFormState extends State<PatientInfoForm> {
                   textInputAction: TextInputAction.next,
                   decoration:  InputDecoration(
                     enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(5),
+                        borderRadius: BorderRadius.circular(10),
                         borderSide: BorderSide(color: Colors.black),
                       ),
                       focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(5),
+                        borderRadius: BorderRadius.circular(10),
                         borderSide: BorderSide(color: Colors.black),
                       ),
                     // filled: true,
@@ -277,11 +277,11 @@ class PatientInfoFormState extends State<PatientInfoForm> {
                 DropdownButtonFormField(
                   decoration:  InputDecoration(
                     enabledBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(5),
+                                  borderRadius: BorderRadius.circular(10),
                                   borderSide: BorderSide(color: Colors.black),
                                 ),
                                 focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(5),
+                                  borderRadius: BorderRadius.circular(10),
                                   borderSide: BorderSide(color: Colors.black),
                                 ),
                     // filled: true,
@@ -298,11 +298,11 @@ class PatientInfoFormState extends State<PatientInfoForm> {
                 DropdownButtonFormField(
                   decoration:  InputDecoration(
                     enabledBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(5),
+                                  borderRadius: BorderRadius.circular(10),
                                   borderSide: BorderSide(color: Colors.black),
                                 ),
                                 focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(5),
+                                  borderRadius: BorderRadius.circular(10),
                                   borderSide: BorderSide(color: Colors.black),
                                 ),
                     // filled: true,
@@ -319,11 +319,11 @@ class PatientInfoFormState extends State<PatientInfoForm> {
                 DropdownButtonFormField(
                   decoration:  InputDecoration(
                     enabledBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(5),
+                                  borderRadius: BorderRadius.circular(10),
                                   borderSide: BorderSide(color: Colors.black),
                                 ),
                                 focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(5),
+                                  borderRadius: BorderRadius.circular(10),
                                   borderSide: BorderSide(color: Colors.black),
                                 ),
                     // filled: true,
@@ -340,11 +340,11 @@ class PatientInfoFormState extends State<PatientInfoForm> {
                 DropdownButtonFormField(
                   decoration:  InputDecoration(
                     enabledBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(5),
+                                  borderRadius: BorderRadius.circular(10),
                                   borderSide: BorderSide(color: Colors.black),
                                 ),
                                 focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(5),
+                                  borderRadius: BorderRadius.circular(10),
                                   borderSide: BorderSide(color: Colors.black),
                                 ),
                     // filled: true,

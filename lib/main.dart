@@ -222,7 +222,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Color.fromARGB(255, 81, 166, 205),
             Color.fromARGB(255, 161, 175, 225),
             Color.fromARGB(255, 214, 175, 212),
-
+    
             // Color.fromRGBO(46, 25, 96, 1),
             // Color.fromRGBO(93, 16, 73, 1)
           ])),
@@ -246,59 +246,68 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ],
           ),
-          body: Center(
-            child: Container(
-              width: MediaQuery.of(context).size.width,
-              child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    const Padding(
-                      padding: EdgeInsets.all(30),
-                      child: Text(
-                        "Scan Document",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 40,
+          body: SingleChildScrollView(
+            child: Center(
+              child: Container(
+                width: MediaQuery.of(context).size.width,
+                child: Column(
+                    // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  
+                    children: [
+                      const Padding(
+                        padding: EdgeInsets.all(50),
+                        child: Text(
+                          "Scan Document",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 40,
+                          ),
                         ),
                       ),
-                    ),
-                    Column(
-                      children: [
-                        const Padding(
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 50, vertical: 30),
-                          child: Text(
-                            "Take picture from camera and upload it to the server. Click Below to add Image",
-                            style: TextStyle(color: Colors.white, fontSize: 20),
-                          ),
-                        ),
-                        ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color.fromRGBO(0, 0, 0, 0.1),
-                            padding: const EdgeInsets.symmetric(
-                                vertical: 30, horizontal: 40),
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30)),
-                          ),
-                          child: const Text(
-                            "Add an Image",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20,
-                              fontWeight: FontWeight.w300,
+                      SizedBox(height: 20,),
+                      Column(
+                        children: [
+                          const Padding(
+                            padding: EdgeInsets.symmetric(
+                                horizontal: 60, vertical: 70),
+                            child: Text(
+                              "Take picture from camera and upload it to the server. Click Below to add Image",
+                              style: TextStyle(color: Colors.white, fontSize: 20),
                             ),
                           ),
-                         
-                          onPressed: () => {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>AddImage()))
-                          },
-                        ),
-                      ],
-                    )
-                  ]),
+                          
+                          Padding(
+                            padding: const EdgeInsets.only(right: 30),
+                            child: ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: const Color.fromARGB(255, 6, 103, 116),
+                                // const Color.fromRGBO(0, 0, 0, 0.1),
+                                padding: const EdgeInsets.symmetric(
+                                    vertical: 30, horizontal: 40),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(30)),
+                              ),
+                              child: const Text(
+                                "Add an Image",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w300,
+                                ),
+                              ),
+                             
+                              onPressed: () => {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>AddImage()))
+                              },
+                            ),
+                          ),
+                        ],
+                      )
+                    ]),
+              ),
             ),
           ),
           drawer: Drawer(

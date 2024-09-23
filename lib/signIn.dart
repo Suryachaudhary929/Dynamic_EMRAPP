@@ -6,7 +6,7 @@ import 'appSettings.dart';
 import 'model/branch.dart';
 import 'model/login_response.dart';
 import 'main.dart';
-import 'package:dropdown_button2/dropdown_button2.dart';
+
 
 class SignIn extends StatelessWidget {
   //const AppSetting({super.key});
@@ -18,9 +18,34 @@ class SignIn extends StatelessWidget {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 230, 241, 225),
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        backgroundColor: Color.fromARGB(255, 230, 241, 225),
         centerTitle: true,
         title: const Text(appTitle),
+       leading: BackButton(),
+        // actions: [
+          
+        // Row(
+        //   children: [
+        //     InkWell(
+        //       onTap: (){
+        //           Navigator.push(
+        //       context, MaterialPageRoute(builder: (context) => AppSetting()));
+        //       },
+        //       child: Container(
+        //         margin: EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+        //         height: 40,
+        //         width: 40,
+        //         decoration:BoxDecoration(
+        //           borderRadius: BorderRadius.circular(15),
+        //           color: Colors.green,
+                  
+        //         ),
+        //         child: Icon(Icons.settings,color: Colors.white,),
+        //       ),
+        //     ),
+        //   ],
+        // ),
+        // ],
       ),
       body: const SignInForm(), // body
       floatingActionButton: FloatingActionButton(

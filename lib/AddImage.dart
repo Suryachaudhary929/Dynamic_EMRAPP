@@ -110,7 +110,7 @@ class _AddImageState extends State<AddImage> {
                 colors: [
               Color.fromARGB(255, 214, 175, 212),
               Color.fromARGB(255, 161, 175, 225),
-              Color.fromARGB(255, 81, 166, 205),
+              //  Color.fromARGB(255, 81, 166, 205),
               Color.fromARGB(255, 161, 175, 225),
               Color.fromARGB(255, 214, 175, 212),
 
@@ -128,9 +128,9 @@ class _AddImageState extends State<AddImage> {
                   children: [
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.green.shade700,
-                        padding:
-                            EdgeInsets.symmetric(vertical: 40, horizontal: 60),
+                        backgroundColor:const Color.fromARGB(255, 35, 177, 196),
+                        padding: EdgeInsets.symmetric(
+                            vertical: 40, horizontal: 60),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30)),
                       ),
@@ -155,12 +155,13 @@ class _AddImageState extends State<AddImage> {
                         _imageFromCamera(),
                       },
                     ),
+                  
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.green.shade700,
+                        backgroundColor:const Color.fromARGB(255, 35, 177, 196),
                         //  Color.fromRGBO(0, 0, 0, 0.1),
-                        padding:
-                            EdgeInsets.symmetric(vertical: 40, horizontal: 50),
+                        padding: EdgeInsets.symmetric(
+                            vertical: 40, horizontal: 50),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30)),
                       ),
